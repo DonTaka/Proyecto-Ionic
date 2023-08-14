@@ -25,15 +25,20 @@
       <ion-card-content>
         <ion-list>
           <ion-item>
-            <ion-input label="Nombre Usuario" labelPlacement="floating" placeholder="Ingrese nombre usuario">
+            <ion-input label="Nombre Usuario" labelPlacement="floating" placeholder="Ingrese nombre usuario"
+              [(ngModel)]="user.usuario">
             </ion-input>
           </ion-item>
           <ion-item>
-            <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingrese contraseña" type="password">
+            <ion-input label="Contraseña" labelPlacement="floating" placeholder="Ingrese contraseña" type="password"
+              [(ngModel)]="user.password">
             </ion-input>
           </ion-item><br>
-          <ion-toggle aria-label="Primary Toggle" labelPlacement="start" color="success">Recordar</ion-toggle><br>
-          <ion-button shape="round" size="small" [routerLink]="['/dashboard']">Ingresar</ion-button>
+          <ion-toggle aria-label="Primary Toggle" labelPlacement="start" color="success">Recordar</ion-toggle><br><br>
+          <ion-button shape="round" size="small" [routerLink]="['/dashboard']">Ingresar</ion-button><br>
+          <ion-button (click)="mostrarInfo()" shape=" round" size="small">
+            Consola
+          </ion-button>
         </ion-list>
       </ion-card-content>
     </ion-card>

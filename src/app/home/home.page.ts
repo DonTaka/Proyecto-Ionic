@@ -10,5 +10,12 @@ export class HomePage {
 
   constructor(private router: Router) { }
 
+  user  ={
+    usuario:"",
+    password:""
+  }
 
+  mostrarInfo(){
+    console.log(this.user);
+  }
 }
