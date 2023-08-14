@@ -36,7 +36,7 @@
           </ion-item><br>
           <ion-toggle aria-label="Primary Toggle" labelPlacement="start" color="success">Recordar</ion-toggle><br><br>
           <ion-button shape="round" size="small" [routerLink]="['/dashboard']">Ingresar</ion-button><br>
-          <ion-button (click)="mostrarInfo()" shape=" round" size="small">
+          <ion-button (click)="mostrarInfo()" id="alerta" shape=" round" size="small">
             Consola
           </ion-button>
         </ion-list>
@@ -45,4 +45,6 @@
 
 
   </div>
+  <ion-alert trigger="alerta" header="Ingreso de Usuario" subHeader="{{campo}}" message=""
+    [buttons]="alertButtons"></ion-alert>
 </ion-content>

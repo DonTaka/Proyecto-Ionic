@@ -14,8 +14,14 @@ export class HomePage {
     usuario:"",
     password:""
   }
-
+   public campo ="";
   mostrarInfo(){
     console.log(this.user);
+    if (this.user.usuario!="" && this.user.password!=""){
+      this.campo="Usuario Existente";
+    }else{
+      this.campo="Usuario no Existe";
+    }
   }
+  public alertButtons = ['OK'];
 }
