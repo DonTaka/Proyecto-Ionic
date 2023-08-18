@@ -7,7 +7,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
+      <h1 id="titulo">SkeletonApp</h1>
+      <h2 id="sub">Aqui Comienza todo</h2>
     </ion-toolbar>
   </ion-header>
+
+
+  <div id="container">
+    <h1>Bienvenido</h1>
+    <ion-item>
+      <ion-input [(ngModel)]="user.username" type="text" labelPlacement="floating" label="Nombre Usuario"
+        placeholder="Ingrese Username">
+      </ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input [(ngModel)]="user.password" type="password" labelPlacement="floating" label="Contraseña"
+        placeholder="Ingrese contraseña">
+      </ion-input>
+    </ion-item><br>
+    <ion-button (click)="enviarPerfil()" expand="block">
+      Ingresar
+    </ion-button>
+    <a [routerLink]="['/dashboard']">Crear cuenta</a>
+  </div>
 </ion-content>
