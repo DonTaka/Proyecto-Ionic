@@ -12,16 +12,21 @@ export class LoginPage implements OnInit {
 
   }
 
-  public user = {
+  user = {
     username: "",
     password: ""
   }
 
+
   enviarPerfil() {
-    let navigationExtras: NavigationExtras = {
+    //Se crea el navigationExtras para enviar el paquete de informacion
+    //A la siguiente pagina que lo deba recibir
+    //Para ello empaquetamos nuestra informacion en la variable state
+    //que esta incluida en el navigationExtras
+    const navigationExtras: NavigationExtras = {
       state: { user: this.user }
     }
-    console.log(this.user);
+    //Enrutamos y enviamos a nuestro nuevo destino
     this.router.navigate(['/perfil-usuario'], navigationExtras);
   }
 
